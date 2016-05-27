@@ -1,6 +1,7 @@
 ﻿import {RollResult} from "./RollResult";
 import {FixedAttackProperty, SurgeAttackProperty} from "./AttackProperty";
 import {DefenseProperty} from "./DefenseProperty";
+import {SpecialAbilities} from "./SpecialAbilities";
 import {Dice} from "./Dice";
 
 export class PossibleRolls {
@@ -105,7 +106,12 @@ export class PossibleRolls {
         return totalSurges;
     }
 
-    getEffectiveDamage(surgeAbilities: SurgeAttackProperty[], specialAbilities:SpecialAbilities, fixedAttackAbility: FixedAttackProperty, fixedDefenseAbility: DefenseProperty, needRange: number): { [damage: number]: number } {
+    getEffectiveDamage(
+    surgeAbilities: SurgeAttackProperty[], 
+    specialAbilities:SpecialAbilities, 
+    fixedAttackAbility: FixedAttackProperty, 
+    fixedDefenseAbility: DefenseProperty, 
+    needRange: number): { [damage: number]: number } {
         let effectiveDamage: { [damage: number]: number } = {};
         let surgeSetCache: { [surgeCount: number]: SurgeAttackProperty[][] } = {};
 

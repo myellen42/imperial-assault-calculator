@@ -7,6 +7,8 @@ export class ProbabilityChart {
 
     legend: LegendInfo[];
 
+    legendName:string;
+
     private _chartMaxDamage: number;
     private _chart: LinearInstance;
     private _datasets: any[];
@@ -15,6 +17,7 @@ export class ProbabilityChart {
     constructor( @inject element: Element) {
         this._element = element;
         this.resetChart();
+        this.legendName = "";
     }
 
     private setChartDisplay(val: boolean) {
@@ -101,10 +104,15 @@ export class ProbabilityChart {
                 ds.data.push(0);
             }
         }
+        let tempName:string = "" + this._datasets.length ;
+        console.log(this);  
+        if(this.legendName) {
+            tempName = this.legendName;
+        } 
 
         if (this.legend.length < 12) {
             this.legend.push({
-                value: this._datasets.length,
+                value: tempName,
                 color: this.getColor(1),
                 textColor: this.getTextColor()
             });

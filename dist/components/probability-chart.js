@@ -26,6 +26,7 @@ var ProbabilityChart = (function () {
         ];
         this._element = element;
         this.resetChart();
+        this.legendName = "";
     }
     ProbabilityChart.prototype.setChartDisplay = function (val) {
         var chartContainer = $(this._element).find("#chartContainer").get(0);
@@ -91,9 +92,14 @@ var ProbabilityChart = (function () {
                 ds.data.push(0);
             }
         }
+        var tempName = "" + this._datasets.length;
+        console.log(this);
+        if (this.legendName) {
+            tempName = this.legendName;
+        }
         if (this.legend.length < 12) {
             this.legend.push({
-                value: this._datasets.length,
+                value: tempName,
                 color: this.getColor(1),
                 textColor: this.getTextColor()
             });

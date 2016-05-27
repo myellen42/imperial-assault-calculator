@@ -25,7 +25,6 @@ export class AttackCalc {
 
     probabilityChart: ProbabilityChart;
 
-
     constructor() {
         this.diceCount = new Dice<number>();
         this.resetAttackDice();
@@ -107,7 +106,11 @@ export class AttackCalc {
 
         //possibleRolls.showProb();
 
-        let damageResults = possibleRolls.getEffectiveDamage(this.surgeAbilities, this.specialAbilities,this.fixedAttackAbility, this.fixedDefenseAbility, this.range);
+        let damageResults = possibleRolls.getEffectiveDamage(
+        this.surgeAbilities, 
+        this.specialAbilities,
+        this.fixedAttackAbility, 
+        this.fixedDefenseAbility, this.range);
         this.probabilityChart.addChartData(damageResults);
     }
 }
