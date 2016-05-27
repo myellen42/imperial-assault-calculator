@@ -7,47 +7,47 @@ export class PossibleRolls {
 
     private _dice: Dice<RollResult[]> = {
         red: [
-            new RollResult(1, 0, 0, 0, 0, false, 1 / 6),
-            new RollResult(2, 0, 0, 0, 0, false, 2 / 6),
-            new RollResult(2, 1, 0, 0, 0, false, 1 / 6),
-            new RollResult(3, 0, 0, 0, 0, false, 2 / 6)
+            new RollResult(1, 0, 0, 0, 0, 0, 1 / 6),
+            new RollResult(2, 0, 0, 0, 0, 0, 2 / 6),
+            new RollResult(2, 1, 0, 0, 0, 0, 1 / 6),
+            new RollResult(3, 0, 0, 0, 0, 0, 2 / 6)
         ],
         blue: [
-            new RollResult(1, 0, 2, 0, 0, false, 1 / 6),
-            new RollResult(0, 1, 2, 0, 0, false, 1 / 6),
-            new RollResult(2, 0, 3, 0, 0, false, 1 / 6),
-            new RollResult(1, 1, 3, 0, 0, false, 1 / 6),
-            new RollResult(2, 0, 4, 0, 0, false, 1 / 6),
-            new RollResult(1, 0, 5, 0, 0, false, 1 / 6)
+            new RollResult(1, 0, 2, 0, 0, 0, 1 / 6),
+            new RollResult(0, 1, 2, 0, 0, 0, 1 / 6),
+            new RollResult(2, 0, 3, 0, 0, 0, 1 / 6),
+            new RollResult(1, 1, 3, 0, 0, 0, 1 / 6),
+            new RollResult(2, 0, 4, 0, 0, 0, 1 / 6),
+            new RollResult(1, 0, 5, 0, 0, 0, 1 / 6)
         ],
         green: [
-            new RollResult(0, 1, 1, 0, 0, false, 1 / 6),
-            new RollResult(1, 1, 1, 0, 0, false, 1 / 6),
-            new RollResult(2, 0, 1, 0, 0, false, 1 / 6),
-            new RollResult(2, 0, 2, 0, 0, false, 1 / 6),
-            new RollResult(1, 1, 2, 0, 0, false, 1 / 6),
-            new RollResult(2, 0, 3, 0, 0, false, 1 / 6)
+            new RollResult(0, 1, 1, 0, 0, 0, 1 / 6),
+            new RollResult(1, 1, 1, 0, 0, 0, 1 / 6),
+            new RollResult(2, 0, 1, 0, 0, 0, 1 / 6),
+            new RollResult(2, 0, 2, 0, 0, 0, 1 / 6),
+            new RollResult(1, 1, 2, 0, 0, 0, 1 / 6),
+            new RollResult(2, 0, 3, 0, 0, 0, 1 / 6)
         ],
         yellow: [
-            new RollResult(0, 1, 0, 0, 0, false, 1 / 6),
-            new RollResult(1, 2, 0, 0, 0, false, 1 / 6),
-            new RollResult(1, 1, 1, 0, 0, false, 1 / 6),
-            new RollResult(2, 0, 1, 0, 0, false, 1 / 6),
-            new RollResult(0, 1, 2, 0, 0, false, 1 / 6),
-            new RollResult(1, 0, 2, 0, 0, false, 1 / 6)
+            new RollResult(0, 1, 0, 0, 0, 0, 1 / 6),
+            new RollResult(1, 2, 0, 0, 0, 0, 1 / 6),
+            new RollResult(1, 1, 1, 0, 0, 0, 1 / 6),
+            new RollResult(2, 0, 1, 0, 0, 0, 1 / 6),
+            new RollResult(0, 1, 2, 0, 0, 0, 1 / 6),
+            new RollResult(1, 0, 2, 0, 0, 0, 1 / 6)
         ],
         black: [
-            new RollResult(0, 0, 0, 1, 0, false, 2 / 6),
-            new RollResult(0, 0, 0, 2, 0, false, 2 / 6),
-            new RollResult(0, 0, 0, 3, 0, false, 1 / 6),
-            new RollResult(0, 0, 0, 0, 1, false, 1 / 6)
+            new RollResult(0, 0, 0, 1, 0, 0, 2 / 6),
+            new RollResult(0, 0, 0, 2, 0, 0, 2 / 6),
+            new RollResult(0, 0, 0, 3, 0, 0, 1 / 6),
+            new RollResult(0, 0, 0, 0, 1, 0, 1 / 6)
         ],
         white: [
-            new RollResult(0, 0, 0, 0, 0, false, 1 / 6),
-            new RollResult(0, 0, 0, 1, 0, false, 1 / 6),
-            new RollResult(0, 0, 0, 0, 1, false, 1 / 6),
-            new RollResult(0, 0, 0, 1, 1, false, 2 / 6),
-            new RollResult(0, 0, 0, 0, 0, true, 1 / 6)
+            new RollResult(0, 0, 0, 0, 0, 0, 1 / 6),
+            new RollResult(0, 0, 0, 1, 0, 0, 1 / 6),
+            new RollResult(0, 0, 0, 0, 1, 0, 1 / 6),
+            new RollResult(0, 0, 0, 1, 1, 0, 2 / 6),
+            new RollResult(0, 0, 0, 0, 0, 1, 1 / 6)
         ]
     }
 
@@ -105,18 +105,16 @@ export class PossibleRolls {
         return totalSurges;
     }
 
-    getEffectiveDamage(surgeAbilities: SurgeAttackProperty[], fixedAttackAbility: FixedAttackProperty, fixedDefenseAbility: DefenseProperty, needRange: number): { [damage: number]: number } {
+    getEffectiveDamage(surgeAbilities: SurgeAttackProperty[], specialAbilities:SpecialAbilities, fixedAttackAbility: FixedAttackProperty, fixedDefenseAbility: DefenseProperty, needRange: number): { [damage: number]: number } {
         let effectiveDamage: { [damage: number]: number } = {};
         let surgeSetCache: { [surgeCount: number]: SurgeAttackProperty[][] } = {};
 
         for (let prKey in this._possibleRolls) {
             let rollResult = this._possibleRolls[prKey];
-            if (rollResult.miss) {
-                this.updateValue(effectiveDamage, 0, rollResult.probability);
-                continue;
-            }
+
 
             let calcDamageResult: RollResult = Object.assign({}, rollResult);
+
             calcDamageResult.surge += fixedAttackAbility.surge;
             calcDamageResult.surge -= fixedDefenseAbility.evade;
             calcDamageResult.surge -= calcDamageResult.evade;
@@ -146,7 +144,22 @@ export class PossibleRolls {
 
                 maxDamage = Math.max(maxDamage, this.getDamage(checkCalcDamageResult, needRange));
             }
-            //console.log("maxDamage: %d", maxDamage);
+            
+            calcDamageResult.miss += rollResult.miss;
+            
+            if(specialAbilities.has('lucky') && rollResult.evade == 0 && rollResult.block == 0) {
+                calcDamageResult.miss++;
+            }
+
+            if(specialAbilities.has('deadly')) {
+                calcDamageResult.miss = Math.min(0, calcDamageResult.miss-1);
+            }
+
+            
+            if (calcDamageResult.miss > 0) {
+                this.updateValue(effectiveDamage, 0, rollResult.probability);
+                continue;
+            }
 
             this.updateValue(effectiveDamage, maxDamage, calcDamageResult.probability);
         }
