@@ -3,6 +3,7 @@ import 'bootstrap/css/bootstrap.css!';
 import {PossibleRolls} from "../util/PossibleRolls";
 import {SurgeAttackProperty, FixedAttackProperty} from "../util/AttackProperty";
 import {DefenseProperty} from "../util/DefenseProperty";
+import {SpecialAbilities} from "../util/SpecialAbilities";
 import {Dice} from "../util/Dice";
 import {ProbabilityChart} from "../components/probability-chart";
 import "Chart.js";
@@ -10,17 +11,19 @@ import 'jquery';
 import {attach as attachFastClick} from 'fastclick';
 import 'bootstrap';
 
+
 export class AttackCalc {
     diceCount: Dice<number>;
 
     surgeAbilities: SurgeAttackProperty[];
     fixedAttackAbility: FixedAttackProperty;
     fixedDefenseAbility: DefenseProperty;
+
+    specialAbilities: SpecialAbilities;
     attack_type: string;
     range: number;
 
     probabilityChart: ProbabilityChart;
-
 
     constructor() {
         this.diceCount = new Dice<number>();
@@ -29,6 +32,7 @@ export class AttackCalc {
 
         this.surgeAbilities = [];
         this.attack_type = "melee";
+        this.specialAbilities = new SpecialAbilities();
         this.range = 0;
     }
 
@@ -66,6 +70,14 @@ export class AttackCalc {
         this.surgeAbilities = this.surgeAbilities.filter(p => p != surge);
     }
 
+    toggleSpecialAbility(key: string) {
+        this.specialAbilities.toggle(key);
+    }
+
+    resetSpecialAbilities(){
+        this.specialAbilities.reset();
+    }
+
     resetAttackDice() {
         this.diceCount.red = 0;
         this.diceCount.blue = 0;
@@ -94,7 +106,11 @@ export class AttackCalc {
 
         //possibleRolls.showProb();
 
-        let damageResults = possibleRolls.getEffectiveDamage(this.surgeAbilities, this.fixedAttackAbility, this.fixedDefenseAbility, this.range);
+        let damageResults = possibleRolls.getEffectiveDamage(
+        this.surgeAbilities, 
+        this.specialAbilities,
+        this.fixedAttackAbility, 
+        this.fixedDefenseAbility, this.range);
         this.probabilityChart.addChartData(damageResults);
     }
 }

@@ -1,6 +1,7 @@
 <template>
     <div class="row legend-item-row">
         <div repeat.for="item of legend" class="legend-item" css="background-color: ${item.color}; color: ${item.textColor}">${item.value}</div>
+        <input style="width:100px;" placeholder="${_datasets.length+1}" id="legendName" type="text" value.two-way="legendName">
     </div>
     <div id="chartContainer" style="display:none;">
         <canvas id="damageChart"

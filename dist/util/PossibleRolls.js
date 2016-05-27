@@ -4,47 +4,47 @@ var PossibleRolls = (function () {
     function PossibleRolls() {
         this._dice = {
             red: [
-                new RollResult_1.RollResult(1, 0, 0, 0, 0, false, 1 / 6),
-                new RollResult_1.RollResult(2, 0, 0, 0, 0, false, 2 / 6),
-                new RollResult_1.RollResult(2, 1, 0, 0, 0, false, 1 / 6),
-                new RollResult_1.RollResult(3, 0, 0, 0, 0, false, 2 / 6)
+                new RollResult_1.RollResult(1, 0, 0, 0, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(2, 0, 0, 0, 0, 0, 2 / 6),
+                new RollResult_1.RollResult(2, 1, 0, 0, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(3, 0, 0, 0, 0, 0, 2 / 6)
             ],
             blue: [
-                new RollResult_1.RollResult(1, 0, 2, 0, 0, false, 1 / 6),
-                new RollResult_1.RollResult(0, 1, 2, 0, 0, false, 1 / 6),
-                new RollResult_1.RollResult(2, 0, 3, 0, 0, false, 1 / 6),
-                new RollResult_1.RollResult(1, 1, 3, 0, 0, false, 1 / 6),
-                new RollResult_1.RollResult(2, 0, 4, 0, 0, false, 1 / 6),
-                new RollResult_1.RollResult(1, 0, 5, 0, 0, false, 1 / 6)
+                new RollResult_1.RollResult(1, 0, 2, 0, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(0, 1, 2, 0, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(2, 0, 3, 0, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(1, 1, 3, 0, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(2, 0, 4, 0, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(1, 0, 5, 0, 0, 0, 1 / 6)
             ],
             green: [
-                new RollResult_1.RollResult(0, 1, 1, 0, 0, false, 1 / 6),
-                new RollResult_1.RollResult(1, 1, 1, 0, 0, false, 1 / 6),
-                new RollResult_1.RollResult(2, 0, 1, 0, 0, false, 1 / 6),
-                new RollResult_1.RollResult(2, 0, 2, 0, 0, false, 1 / 6),
-                new RollResult_1.RollResult(1, 1, 2, 0, 0, false, 1 / 6),
-                new RollResult_1.RollResult(2, 0, 3, 0, 0, false, 1 / 6)
+                new RollResult_1.RollResult(0, 1, 1, 0, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(1, 1, 1, 0, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(2, 0, 1, 0, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(2, 0, 2, 0, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(1, 1, 2, 0, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(2, 0, 3, 0, 0, 0, 1 / 6)
             ],
             yellow: [
-                new RollResult_1.RollResult(0, 1, 0, 0, 0, false, 1 / 6),
-                new RollResult_1.RollResult(1, 2, 0, 0, 0, false, 1 / 6),
-                new RollResult_1.RollResult(1, 1, 1, 0, 0, false, 1 / 6),
-                new RollResult_1.RollResult(2, 0, 1, 0, 0, false, 1 / 6),
-                new RollResult_1.RollResult(0, 1, 2, 0, 0, false, 1 / 6),
-                new RollResult_1.RollResult(1, 0, 2, 0, 0, false, 1 / 6)
+                new RollResult_1.RollResult(0, 1, 0, 0, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(1, 2, 0, 0, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(1, 1, 1, 0, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(2, 0, 1, 0, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(0, 1, 2, 0, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(1, 0, 2, 0, 0, 0, 1 / 6)
             ],
             black: [
-                new RollResult_1.RollResult(0, 0, 0, 1, 0, false, 2 / 6),
-                new RollResult_1.RollResult(0, 0, 0, 2, 0, false, 2 / 6),
-                new RollResult_1.RollResult(0, 0, 0, 3, 0, false, 1 / 6),
-                new RollResult_1.RollResult(0, 0, 0, 0, 1, false, 1 / 6)
+                new RollResult_1.RollResult(0, 0, 0, 1, 0, 0, 2 / 6),
+                new RollResult_1.RollResult(0, 0, 0, 2, 0, 0, 2 / 6),
+                new RollResult_1.RollResult(0, 0, 0, 3, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(0, 0, 0, 0, 1, 0, 1 / 6)
             ],
             white: [
-                new RollResult_1.RollResult(0, 0, 0, 0, 0, false, 1 / 6),
-                new RollResult_1.RollResult(0, 0, 0, 1, 0, false, 1 / 6),
-                new RollResult_1.RollResult(0, 0, 0, 0, 1, false, 1 / 6),
-                new RollResult_1.RollResult(0, 0, 0, 1, 1, false, 2 / 6),
-                new RollResult_1.RollResult(0, 0, 0, 0, 0, true, 1 / 6)
+                new RollResult_1.RollResult(0, 0, 0, 0, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(0, 0, 0, 1, 0, 0, 1 / 6),
+                new RollResult_1.RollResult(0, 0, 0, 0, 1, 0, 1 / 6),
+                new RollResult_1.RollResult(0, 0, 0, 1, 1, 0, 2 / 6),
+                new RollResult_1.RollResult(0, 0, 0, 0, 0, 1, 1 / 6)
             ]
         };
         this._possibleRolls = {};
@@ -91,15 +91,11 @@ var PossibleRolls = (function () {
         }
         return totalSurges;
     };
-    PossibleRolls.prototype.getEffectiveDamage = function (surgeAbilities, fixedAttackAbility, fixedDefenseAbility, needRange) {
+    PossibleRolls.prototype.getEffectiveDamage = function (surgeAbilities, specialAbilities, fixedAttackAbility, fixedDefenseAbility, needRange) {
         var effectiveDamage = {};
         var surgeSetCache = {};
         for (var prKey in this._possibleRolls) {
             var rollResult = this._possibleRolls[prKey];
-            if (rollResult.miss) {
-                this.updateValue(effectiveDamage, 0, rollResult.probability);
-                continue;
-            }
             var calcDamageResult = Object.assign({}, rollResult);
             calcDamageResult.surge += fixedAttackAbility.surge;
             calcDamageResult.surge -= fixedDefenseAbility.evade;
@@ -127,7 +123,17 @@ var PossibleRolls = (function () {
                 }
                 maxDamage = Math.max(maxDamage, this.getDamage(checkCalcDamageResult, needRange));
             }
-            //console.log("maxDamage: %d", maxDamage);
+            calcDamageResult.miss += rollResult.miss;
+            if (specialAbilities.has('lucky') && rollResult.evade == 0 && rollResult.block == 0) {
+                calcDamageResult.miss++;
+            }
+            if (specialAbilities.has('deadly')) {
+                calcDamageResult.miss = Math.min(0, calcDamageResult.miss - 1);
+            }
+            if (calcDamageResult.miss > 0) {
+                this.updateValue(effectiveDamage, 0, rollResult.probability);
+                continue;
+            }
             this.updateValue(effectiveDamage, maxDamage, calcDamageResult.probability);
         }
         return effectiveDamage;

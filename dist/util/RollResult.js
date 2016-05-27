@@ -6,7 +6,7 @@ var RollResult = (function () {
         if (range === void 0) { range = 0; }
         if (block === void 0) { block = 0; }
         if (evade === void 0) { evade = 0; }
-        if (miss === void 0) { miss = false; }
+        if (miss === void 0) { miss = 0; }
         if (probability === void 0) { probability = 1; }
         this.damage = damage;
         this.surge = surge;
@@ -19,8 +19,11 @@ var RollResult = (function () {
     RollResult.prototype.getHashCode = function () {
         return this.damage + "|" + this.surge + "|" + this.range + "|" + this.block + "|" + this.evade + "|" + this.miss;
     };
+    RollResult.prototype.isATotalBlank = function () {
+        return this.block && this.evade && !this.miss;
+    };
     RollResult.prototype.apply = function (rollResult) {
-        return new RollResult(this.damage + rollResult.damage, this.surge + rollResult.surge, this.range + rollResult.range, this.block + rollResult.block, this.evade + rollResult.evade, this.miss || rollResult.miss, this.probability * rollResult.probability);
+        return new RollResult(this.damage + rollResult.damage, this.surge + rollResult.surge, this.range + rollResult.range, this.block + rollResult.block, this.evade + rollResult.evade, this.miss + rollResult.miss, this.probability * rollResult.probability);
     };
     return RollResult;
 }());

@@ -5,12 +5,16 @@
         public range: number = 0,
         public block: number = 0,
         public evade: number = 0,
-        public miss: boolean = false,
+        public miss: number = 0,
         public probability: number = 1
         ) { }
 
     getHashCode(): string {
         return `${this.damage}|${this.surge}|${this.range}|${this.block}|${this.evade}|${this.miss}`;
+    }
+
+    isATotalBlank(): boolean {
+        return this.block && this.evade && !this.miss;
     }
 
     apply(rollResult: RollResult): RollResult {
@@ -20,7 +24,7 @@
             this.range + rollResult.range,
             this.block + rollResult.block,
             this.evade + rollResult.evade,
-            this.miss || rollResult.miss,
+            this.miss + rollResult.miss,
             this.probability * rollResult.probability
             );
     }

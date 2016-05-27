@@ -3,6 +3,7 @@ require('bootstrap');
 require('bootstrap/css/bootstrap.css!');
 var PossibleRolls_1 = require("../util/PossibleRolls");
 var AttackProperty_1 = require("../util/AttackProperty");
+var SpecialAbilities_1 = require("../util/SpecialAbilities");
 var Dice_1 = require("../util/Dice");
 require("Chart.js");
 require('jquery');
@@ -15,6 +16,7 @@ var AttackCalc = (function () {
         this.resetDefenseDice();
         this.surgeAbilities = [];
         this.attack_type = "melee";
+        this.specialAbilities = new SpecialAbilities_1.SpecialAbilities();
         this.range = 0;
     }
     AttackCalc.prototype.attached = function () {
@@ -45,6 +47,12 @@ var AttackCalc = (function () {
     AttackCalc.prototype.removeSurge = function (surge) {
         this.surgeAbilities = this.surgeAbilities.filter(function (p) { return p != surge; });
     };
+    AttackCalc.prototype.toggleSpecialAbility = function (key) {
+        this.specialAbilities.toggle(key);
+    };
+    AttackCalc.prototype.resetSpecialAbilities = function () {
+        this.specialAbilities.reset();
+    };
     AttackCalc.prototype.resetAttackDice = function () {
         this.diceCount.red = 0;
         this.diceCount.blue = 0;
@@ -69,7 +77,7 @@ var AttackCalc = (function () {
         var possibleRolls = new PossibleRolls_1.PossibleRolls();
         possibleRolls.applyAllRolls(this.diceCount);
         //possibleRolls.showProb();
-        var damageResults = possibleRolls.getEffectiveDamage(this.surgeAbilities, this.fixedAttackAbility, this.fixedDefenseAbility, this.range);
+        var damageResults = possibleRolls.getEffectiveDamage(this.surgeAbilities, this.specialAbilities, this.fixedAttackAbility, this.fixedDefenseAbility, this.range);
         this.probabilityChart.addChartData(damageResults);
     };
     return AttackCalc;
